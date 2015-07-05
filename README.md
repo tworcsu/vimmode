@@ -14,10 +14,13 @@ Unlike others, it has a clean codebase and is _fully_ configurable.
 
   __Tip__: Hold `⌘` (Command key) to hide hints when hints mode is active.
 
+  __Tip__: Press `Esc` or `Ctrl-[` to exit hints mode entirely.
+
   __Tip__: You can still scroll up/down, just use `Ctrl` as a modifier key (even if you've set it to `None`)
 
 * ### Scroll up/down
   `Ctrl-J` and `Ctrl-K` for half-page, `Ctrl-N` and `Ctrl-M` for full page.
+  `Ctrl-T` and `Ctrl-G` jump to top and bottom of page respectively.
 
 * ### Next/previous tab
   `Ctrl-I` and `Ctrl-U`.

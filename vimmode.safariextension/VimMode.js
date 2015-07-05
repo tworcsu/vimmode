@@ -355,6 +355,14 @@
     scrollUpFullKey         : 'M',
     scrollUpFullKeyCode     : 77,
 
+    jumpToBottomModifier    : 'ctrlKey',
+    jumpToBottomKey         : 'G',
+    jumpToBottomKeyCode     : 71,
+
+    jumpToTopModifier       : 'ctrlKey',
+    jumpToTopKey            : 'T',
+    jumpToTopKeyCode        : 84,
+
     nextTabModifier         : 'ctrlKey',
     nextTabKey              : 'I',
     nextTabKeyCode          : 73,
@@ -414,8 +422,8 @@
 
       // if hints mode is active, we do more
       if (hintsModeActive) {
-        // if esc is pressed we leave hints mode
-        if (keyCode == 27) {
+        // if esc or CTRL-[ is pressed we leave hints mode
+        if (keyCode == 27 || (event.ctrlKey && !event.metaKey && keyCode == 219)) {
           leaveHintsMode();
           return stopEvent(event);
         }
@@ -478,6 +486,19 @@
       // scroll up full
       if (event[settings.scrollUpFullModifier] && !event.metaKey && keyCode == settings.scrollUpFullKeyCode) {
         window.scrollBy(0, -window.innerHeight);
+        return stopEvent(event);
+      }
+      // jump to top of page
+      if (event.ctrlKey && !event.metaKey && keyCode == 84) {
+        console.log("scroll to top");
+        window.scroll(0,0);
+        return stopEvent(event);
+      }
+
+      // jump to bottom of page
+      if (event.ctrlKey && !event.metaKey && keyCode == 71) {
+        console.log("scroll to bottom");
+        window.scrollTo(0,document.body.scrollHeight);
         return stopEvent(event);
       }
 

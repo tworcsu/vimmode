@@ -274,6 +274,94 @@
 	</dict>
 	<dict>
 		<key>Title</key>
+		<string>Jump to top of page</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>ctrlKey</string>
+		<key>Key</key>
+		<string>jumpToTopModifier</string>
+		<key>Title</key>
+		<string>Modifier</string>
+		<key>Titles</key>
+		<array>
+			<string>Control</string>
+			<string>Alt</string>
+			<string>None</string>
+			<string>Disable this action</string>
+		</array>
+		<key>Type</key>
+		<string>RadioButtons</string>
+		<key>Values</key>
+		<array>
+			<string>ctrlKey</string>
+			<string>altKey</string>
+			<string>returnValue</string>
+			<string>iAmDisabled</string>
+		</array>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>T</string>
+		<key>Key</key>
+		<string>jumpToTopKey</string>
+		<key>Title</key>
+		<string>Key</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>Type</key>
+		<string>Separator</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Jump to bottom of page</string>
+		<key>Type</key>
+		<string>Group</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>ctrlKey</string>
+		<key>Key</key>
+		<string>jumpToBottomModifier</string>
+		<key>Title</key>
+		<string>Modifier</string>
+		<key>Titles</key>
+		<array>
+			<string>Control</string>
+			<string>Alt</string>
+			<string>None</string>
+			<string>Disable this action</string>
+		</array>
+		<key>Type</key>
+		<string>RadioButtons</string>
+		<key>Values</key>
+		<array>
+			<string>ctrlKey</string>
+			<string>altKey</string>
+			<string>returnValue</string>
+			<string>iAmDisabled</string>
+		</array>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>G</string>
+		<key>Key</key>
+		<string>jumpToBottomKey</string>
+		<key>Title</key>
+		<string>Key</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>Type</key>
+		<string>Separator</string>
+	</dict>
+	<dict>
+		<key>Title</key>
 		<string>Next tab</string>
 		<key>Type</key>
 		<string>Group</string>
@@ -441,6 +529,18 @@
 		<real>77</real>
 		<key>Key</key>
 		<string>scrollUpFullKeyCode</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<real>84</real>
+		<key>Key</key>
+		<string>JumpToTopKeyCode</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<real>71</real>
+		<key>Key</key>
+		<string>JumpToBottomKeyCode</string>
 	</dict>
 </array>
 </plist>

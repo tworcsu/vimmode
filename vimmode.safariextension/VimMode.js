@@ -355,13 +355,13 @@
     scrollUpFullKey         : 'M',
     scrollUpFullKeyCode     : 77,
 
-    jumpToBottomModifier    : 'ctrlKey',
-    jumpToBottomKey         : 'G',
-    jumpToBottomKeyCode     : 71,
-
     jumpToTopModifier       : 'ctrlKey',
     jumpToTopKey            : 'T',
     jumpToTopKeyCode        : 84,
+
+    jumpToBottomModifier    : 'ctrlKey',
+    jumpToBottomKey         : 'G',
+    jumpToBottomKeyCode     : 71,
 
     nextTabModifier         : 'ctrlKey',
     nextTabKey              : 'I',
@@ -489,15 +489,13 @@
         return stopEvent(event);
       }
       // jump to top of page
-      if (event.ctrlKey && !event.metaKey && keyCode == 84) {
-        console.log("scroll to top");
+      if (event[settings.jumpToTopModifier] && !event.metaKey && keyCode == settings.jumpToTopKeyCode) {
         window.scroll(0,0);
         return stopEvent(event);
       }
 
       // jump to bottom of page
-      if (event.ctrlKey && !event.metaKey && keyCode == 71) {
-        console.log("scroll to bottom");
+      if (event[settings.jumpToBottomModifier] && !event.metaKey && keyCode == settings.jumpToBottomKeyCode) {
         window.scrollTo(0,document.body.scrollHeight);
         return stopEvent(event);
       }

@@ -534,13 +534,13 @@
 		<key>DefaultValue</key>
 		<real>84</real>
 		<key>Key</key>
-		<string>JumpToTopKeyCode</string>
+		<string>jumpToTopKeyCode</string>
 	</dict>
 	<dict>
 		<key>DefaultValue</key>
 		<real>71</real>
 		<key>Key</key>
-		<string>JumpToBottomKeyCode</string>
+		<string>jumpToBottomKeyCode</string>
 	</dict>
 </array>
 </plist>

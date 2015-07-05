@@ -46,6 +46,14 @@ function sendSettings() {
     scrollUpFullKey         : safari.extension.settings.scrollUpFullKey,
     scrollUpFullKeyCode     : safari.extension.settings.scrollUpFullKeyCode,
 
+    jumpToTopModifier       : safari.extension.settings.jumpToTopModifier,
+    jumpToTopKey            : safari.extension.settings.jumpToTopKey,
+    jumpToTopKeyCode        : safari.extension.settings.jumpToTopKeyCode,
+
+    jumpToBottomModifier    : safari.extension.settings.jumpToBottomModifier,
+    jumpToBottomKey         : safari.extension.settings.jumpToBottomKey,
+    jumpToBottomKeyCode     : safari.extension.settings.jumpToBottomKeyCode,
+
     nextTabModifier         : safari.extension.settings.nextTabModifier,
     nextTabKey              : safari.extension.settings.nextTabKey,
     nextTabKeyCode          : safari.extension.settings.nextTabKeyCode,
@@ -84,6 +92,8 @@ function validateSettings() {
   var scrollUpHalfKeyCode = safari.extension.settings.scrollUpHalfKey.toUpperCase().slice(0, 1).charCodeAt(0);
   var scrollDownFullKeyCode = safari.extension.settings.scrollDownFullKey.toUpperCase().slice(0, 1).charCodeAt(0);
   var scrollUpFullKeyCode = safari.extension.settings.scrollUpFullKey.toUpperCase().slice(0, 1).charCodeAt(0);
+  var jumpToTopKeyCode = safari.extension.settings.jumpToTopKey.toUpperCase().slice(0, 1).charCodeAt(0);
+  var jumpToBottomKeyCode = safari.extension.settings.jumpToBottomKey.toUpperCase().slice(0, 1).charCodeAt(0);
   var nextTabKeyCode = safari.extension.settings.nextTabKey.toUpperCase().slice(0, 1).charCodeAt(0);
   var prevTabKeyCode = safari.extension.settings.prevTabKey.toUpperCase().slice(0, 1).charCodeAt(0);
 
@@ -105,6 +115,12 @@ function validateSettings() {
   if (!scrollUpFullKeyCode || !validateKeyCode(scrollUpFullKeyCode)) {
     scrollUpFullKeyCode = 77; // M
   }
+  if (!jumpToTopKeyCode || !validateKeyCode(jumpToTopKeyCode)) {
+    jumpToTopKeyCode = 84; // T
+  }
+  if (!jumpToBottomKeyCode || !validateKeyCode(jumpToBottomKeyCode)) {
+    jumpToBottomKeyCode = 71; // G
+  }
   if (!nextTabKeyCode || !validateKeyCode(nextTabKeyCode)) {
     nextTabKeyCode = 73; // I
   }
@@ -118,12 +134,16 @@ function validateSettings() {
   safari.extension.settings.scrollUpHalfKey = String.fromCharCode(scrollUpHalfKeyCode);
   safari.extension.settings.nextTabKey = String.fromCharCode(nextTabKeyCode);
   safari.extension.settings.prevTabKey = String.fromCharCode(prevTabKeyCode);
+  safari.extension.settings.jumpToTopKey = String.fromCharCode(jumpToTopKeyCode);
+  safari.extension.settings.jumpToBottomKey = String.fromCharCode(jumpToBottomKeyCode);
 
   safari.extension.settings.hintsModeKeyCode = hintsModeKeyCode;
   safari.extension.settings.scrollDownHalfKeyCode = scrollDownHalfKeyCode;
   safari.extension.settings.scrollUpHalfKeyCode = scrollUpHalfKeyCode;
   safari.extension.settings.nextTabKeyCode = nextTabKeyCode;
   safari.extension.settings.prevTabKeyCode = prevTabKeyCode;
+  safari.extension.settings.jumpToTopKeyCode = jumpToTopKeyCode;
+  safari.extension.settings.jumpToBottomKeyCode = jumpToBottomKeyCode;
 
   sendSettings();
   safari.extension.settings.addEventListener('change', validateSettings, false);
